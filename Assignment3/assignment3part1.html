@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3 - Part 1 - Arrays</title> 
+    <script type="text/javascript">
+        
+        // 1. access the 2nd value in the array
+/*        var movieFavs=["The Color Purple", "Gone with the Wind", 
+                        "ET", "Mary Popins", "Toy Story"];
+        console.log("The second movie in my list is: " + movieFavs[1]);
+        
+        // 2. declare array called movies, then assign 5 favorite movies, then write the first movie to the console
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        console.log("The first movie in my list is: " + movies[0]);
+        
+        // 3. insert a movie into the third position in the array and report its length
+        movies.splice(2,0, "Independance Day");
+        console.log("The length of the movie array is : " + movies.length);
+        
+        // 4. remove the first movie from the array
+        
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies.shift();
+        console.log(movies);
+       
+        // 5. use a for loop to display contents of array
+        
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies[5] = "Star Trek";
+        movies[6] = "Star Wars";
+
+        for (var i=0; i < movies.length; i++) {
+            console.log(movies[i]);
+        }
+        
+        // 6. use a for-in loop to display contents of array
+        
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies[5] = "Star Trek";
+        movies[6] = "Star Wars";
+
+        for (i in movies) {
+            console.log(movies[i]);
+        }
+        
+        // 7. use a for-in loop to display contents of array and sort
+        
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies[5] = "Star Trek";
+        movies[6] = "Star Wars";
+        
+        for (i in movies) {
+            console.log(movies[i]);
+        }
+        console.log(movies.sort());
+        
+        // 8. display contents of three least favorite movies watched following same array contents above with specific line spacing
+        
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies[5] = "Star Trek";
+        movies[6] = "Star Wars";
+        
+        
+        var leastFavMovies = ["Sound of Music", "My Fair Lady", "Attack of the Killer Green Tomatoes"];
+
+        console.log("Movies I like:\n\n");
+        for (i in movies) {
+            console.log(movies[i]);
+        }
+        console.log("\n\nMovies I regret watching:\n\n");
+        for (i in leastFavMovies)
+            console.log(movies[i]);
+ */
+        // 9. concat two arrays and display the list in reverse sorted order
+        
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies[5] = "Star Trek";
+        movies[6] = "Star Wars";
+        
+        var leastFavMovies = ["Sound of Music", "My Fair Lady", "Attack of the Killer Green Tomatoes"];
+
+        movies = movies.concat(leastFavMovies);
+        
+       
+        for (i in leastFavMovies)
+            console.log("All movies I watched: " + movies.reverse());
+    </script>
+    
+</head>
+<body>
+     <h1>This is Assignment 3 - Part 1</h1>
+     <p>See console and remove comments for results</p>
+</body>
+</html>
