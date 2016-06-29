@@ -255,8 +255,18 @@ Sample Data and Output
 Expected Output: RCv1SBUC or PmJkc2Y2 or nIi5L0FA
 */
         
+function randomPass(length) {
+    var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890";
+    var pass = "";
+    for (var x = 0; x < length; x++) {
+        var i = Math.floor(Math.random() * chars.length);
+        pass += chars.charAt(i);
+    }
+    return pass;
+}
         
-
+    document.write("Your randomly generated password is: " + randomPass(8));
+        
 /////////////////////////////
 /*5.	Write a JavaScript function that accepts a list of country names as input and when called, returns the longest country name as the output.
 
@@ -264,6 +274,7 @@ Sample Data and Output
 Sample function: Longest_Country_Name(["Australia", "Germany", "United States of America"])
 Expected output: "United States of America"
 */
+        /*
     var countryNames = ["Australia", "Germany", "United States of America"];
     
         
@@ -287,7 +298,7 @@ Expected output: "United States of America"
    }
 document.write("The longest country name is: " +  longestCountryName(countryNames));
 
-        
+*/        
         
     </script>
     
