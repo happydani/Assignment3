@@ -191,6 +191,7 @@ Sample Data and Output
 Example string: 'webmaster' 
 Expected Output: 'abeemrstw'
 */
+/*
 var strng = '';   
 
 var alpha = function(str) {
@@ -204,7 +205,8 @@ var alpha = function(str) {
 
 strng = alpha(prompt("Please supply a string for me to alphabetize: ", strng));
 document.write("The alphabetized string is : " + strng);
-
+*/
+        
 /////////////////////////////
 /* 2.	Write a JavaScript function that accepts a string as a parameter and when called, converts the first letter of each word of the string to upper case characters and return it.
 
@@ -212,7 +214,19 @@ Sample Data and Output
 Example string: 'the quick brown fox' 
 Expected Output: 'The Quick Brown Fox'
 */
-
+/*
+var newStr = [];
+function capEachWord(str) {
+    
+    document.writeln("The string you supplied is : " + str + "<br>");
+*/    
+//    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+/*}
+newStr = capEachWord(prompt("Please supply a string for me to capitalize each word: ", newStr));
+document.write("The new string with each word capitalized is: " + newStr);
+*/
+        
+        
 /////////////////////////////
 /* 3.	Write a JavaScript function that accepts a string as a parameter and when called, counts the number of vowels within the string and returns that number.
 
@@ -220,6 +234,16 @@ Sample Data and Output
 Example string: 'The quick brown fox' 
 Expected Output: 5
 */
+var num;
+
+
+function getVowels(str) {
+  var m = str.match(/[aeiou]/gi);
+  return m === null ? 0 : m.length;
+}   
+var newStr = prompt("Please supply a string for me to count each vowel: ", newStr);
+num = getVowels(newStr);
+document.write("There are " + num + " vowels in this string : " + newStr);
    
 /////////////////////////////
 /*4.	Write a JavaScript function that when called, generates a string id (specified length) of 8 random characters and returns those characters as a string. This is a great application to learn for making password generator-type applications.
