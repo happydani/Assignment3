@@ -5,6 +5,9 @@
     <title>Assignment 3 - Part 1 - Arrays</title> 
     <script type="text/javascript">
         
+        //////////////////////////////////////////////////
+        //   Practice with Arrays        
+        
         // 1. access the 2nd value in the array
 /*        var movieFavs=["The Color Purple", "Gone with the Wind", 
                         "ET", "Mary Popins", "Toy Story"];
@@ -33,7 +36,7 @@
         movies[4] = "Toy Story";
         movies.shift();
         console.log(movies);
-       
+
         // 5. use a for loop to display contents of array
         
         var movies = [];
@@ -101,7 +104,7 @@
         console.log("\n\nMovies I regret watching:\n\n");
         for (i in leastFavMovies)
             console.log(movies[i]);
- */
+ 
         // 9. concat two arrays and display the list in reverse sorted order
         
         var movies = [];
@@ -115,11 +118,207 @@
         
         var leastFavMovies = ["Sound of Music", "My Fair Lady", "Attack of the Killer Green Tomatoes"];
 
-        movies = movies.concat(leastFavMovies);
+        movies = movies.concat(leastFavMovies).sort();
+        for (i in movies) {
+            console.log("All movies I watched: " + movies);
+        }
+        
+        movies = movies.reverse();
+       
+        for (i in movies) {
+            console.log("All movies I watched in descending order: " + movies);
+        }
+   
+    
+        // 10. Return just the last item in the array
+        
+        console.log ("The last item in the array is: " + movies[movies.length-1]);
+        
+  
+        // 11.	Remove the previous method and this time return just the first item in the array
+        var movies = [];
+        movies[0] = "The Color Purple";
+        movies[1] = "Gone with the Wind";
+        movies[2] = "ET";
+        movies[3] = "Mary Poppins";
+        movies[4] = "Toy Story";
+        movies[5] = "Star Trek";
+        movies[6] = "Star Wars";
+        
+        var leastFavMovies = ["Sound of Music", "My Fair Lady", "Attack of the Killer Green Tomatoes"];
+
+        movies = movies.concat(leastFavMovies).sort();
+        for (i in movies) {
+            console.log("All movies I watched: " + movies);
+        }
+        //console.log ("The first item in the array is: " + movies[0]);
+        
+        //12.	Programmatically retrieve the movies in your array that you do not like and return their indices. Then, using those indices, programmatically add movies that you do like. 
+        
+        
+        delete movies[0];
+        movies[0] = "One Flew Over the Coocoo's Nest";
+        console.log ("After removing the movies I don't like the array is: " + movies);
+        
+      
+        
+        // 13.	Create two associative arrays called employee1 and employee2 respectively. Each array should have an employeeid, name, title, department, and whether or not the employee is a current employee of the company. Now, add both of those associative arrays to a new array called employees. Then, programmatically display the name of the second employee within a console window. 
+        
+        
+        
+    var employee1=[];
+        employee1["employeeid"] = "32345";
+        employee1["name"] = "Jerry Dutch";
+        employee1["title"]="VP";
+        employee1["department"]="Software";
+        employee1["currentEmployee"] = true;
+        
+    var employee2=[];
+        employee2["employeeid"] = "35913";
+        employee2["name"] = "Norma Landa";
+        employee2["title"]="Supervisor";
+        employee2["department"]="Finance";
+        employee2["currentEmployee"] = true;
+
+    var employees = [employee1,employee2]; // an  associative array 
+        
+       // console.log("The second employee's name is: " + employees[1]["name"]);
         
        
-        for (i in leastFavMovies)
-            console.log("All movies I watched: " + movies.reverse());
+         
+        
+        // 14.	Using the above code, modify the code slightly so that you’re using a loop to loop through the array and printing out the names of both employees.
+    
+        // use loops to retrieve data
+        
+        for (var i=0; i < employees.length; i++) {
+            console.log(employees[i]["name"]);
+        };
+        
+        // 15.	And to really tick you off, add a third employee and set his employment status to false. Then, programmatically loop through the array but don’t display an employee if they aren’t a current employee of the company. Basically, only the first two should appear in the console window.
+        
+        var employee3=[];
+            employee3["employeeid"] = "24315";
+            employee3["name"] = "Lori Peabody";
+            employee3["title"]="Member of Staff";
+            employee3["department"]="Customer Care";
+            employee3["currentEmployee"] = false;
+        
+        employees = [employee1,employee2,employee3];
+        for (var i=0; i < employees.length; i++) {
+            if  (employees[i]["currentEmployee"] === true) {
+                console.log(employees[i]["name"]);
+            }
+        };
+       
+       
+*/  
+        /* 16.	Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. The array should look something like this: 
+        
+        movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
+        
+        Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type. */
+        
+        //var movies = [["Gone with the Wind", 1], ["The Aristocats", 2], ["Independence Day", 3], ["Star Wars", 4], ["The Color Purple", 5]];
+        
+        //for (var i=0; i < movies.length; i++) {
+        //    for (var j=0; j < movies.length; j++) {
+        //        console.log(movies.filter(movies[[i][j]]));  
+        //    }
+        //}
+        
+        //var newarray=movies.filter(movies[i]==='value1');
+        
+        /*if(!Array.prototype.filter){
+            Array.prototype.filter= function(fun, scope){
+                var L= this.length, A= [], i= 0, val;
+                if(typeof fun== 'function'){
+                    while(i< L){
+                        if(i in this){
+                            val= this[i];
+                            if(fun.call(scope, val, i, this)){
+                                A[A.length]= val;
+                            }
+                        }
+                        ++i;
+                    }
+                }
+                return A;
+            }
+        }
+        
+        */
+        //array.filter(function(currentValue,index,arr), thisValue)
+        
+        //////////////////////////////////////////////////
+        //   Practice with Functions 
+        
+        //1.	Create an anonymous function named displayMessage that accepts one parameter. Within the function write a statement that prints out the value of the parameter out into the console window. Now, call the function and pass in a string as the parameter in the function call.        
+        
+    /*    
+        var displayMessage = function(message) {
+         
+            return console.log("The message is: " + message);
+        }
+        
+        displayMessage("Hi there Zak!");
+        
+        
+        //2.	Create a named function named calculate that accepts two parameters. Within the function write a statement that returns the modulus of the first and second parameters. Now, call the function and pass in two numbers as parameters into the function call. Make sure to display the result within the console window.
+        
+        function calculate(x, y) {
+            return x = y % x;
+        }
+        
+        console.log("The resultant calculation is: " + calculate(2,5));
+        
+   */     
+        
+        /*3.	Create a string array called employees and populate the array with several employee names. Then, create an anonymous function called showEmployee. The function should accept a parameter. Call this function, passing in the employees array into the function as a parameter. Make sure to display the result in the console window. Within the function, loop through the passed in array and display the result so that it looks exactly like this in the console window:
+
+        Employees: 
+
+        ZAK 
+        JESSICA 
+        MARK 
+        FRED 
+        SALLY
+            */
+        
+        var employees=["ZAK", "JESSICA", "MARK", "FRED", "SALLY"];
+            
+        var showEmployee = function(employee){
+            console.log("Employees:\n\n");
+            for (var i=0; i < employee.length; i++) {
+                console.log(employee[i]);
+            }
+            return;
+        }
+        showEmployee(employees);
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </script>
     
 </head>
@@ -128,3 +327,35 @@
      <p>See console and remove comments for results</p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
