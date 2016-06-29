@@ -234,6 +234,7 @@ Sample Data and Output
 Example string: 'The quick brown fox' 
 Expected Output: 5
 */
+/*        
 var num;
 
 
@@ -244,13 +245,17 @@ function getVowels(str) {
 var newStr = prompt("Please supply a string for me to count each vowel: ", newStr);
 num = getVowels(newStr);
 document.write("There are " + num + " vowels in this string : " + newStr);
-   
+*/
+        
+        
 /////////////////////////////
 /*4.	Write a JavaScript function that when called, generates a string id (specified length) of 8 random characters and returns those characters as a string. This is a great application to learn for making password generator-type applications.
 
 Sample Data and Output
 Expected Output: RCv1SBUC or PmJkc2Y2 or nIi5L0FA
 */
+        
+        
 
 /////////////////////////////
 /*5.	Write a JavaScript function that accepts a list of country names as input and when called, returns the longest country name as the output.
@@ -259,6 +264,30 @@ Sample Data and Output
 Sample function: Longest_Country_Name(["Australia", "Germany", "United States of America"])
 Expected output: "United States of America"
 */
+    var countryNames = ["Australia", "Germany", "United States of America"];
+    
+        
+   function longestCountryName(cNames) {
+        var longest = "";
+        //var cNames;
+        
+        var j=0;
+        while ( j < cNames.length) {
+            j++;
+            for (var i = 0; i < cNames.length; i++) {
+                if (cNames[i].length > longest) {
+                    longest = cNames[i].length;
+                    //document.writeln(cNames[i].length);
+                    idx = i;
+                }
+            }
+        }
+       
+       return cNames[idx];
+   }
+document.write("The longest country name is: " +  longestCountryName(countryNames));
+
+        
         
     </script>
     
@@ -269,7 +298,7 @@ Expected output: "United States of America"
      <h2>1. Rock, Paper, Scissors</h2>
      <h2>2. The Basic Calculator</h2>
      <h2>3. Death by JavaScript</h2>
-     <p>Remember to view console and remove comments for developer results</p>
+     <p>View console and remove comments for developer results</p>
 </body>
 </html>
 
