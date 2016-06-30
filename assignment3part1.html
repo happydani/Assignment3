@@ -213,43 +213,23 @@
        
        
 */  
-        /* 16.	Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. The array should look something like this: 
+         //16.	Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. The array should look something like this: 
         
-        movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
+        //movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
         
-        Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type. */
+        /*Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type. 
         
-        //var movies = [["Gone with the Wind", 1], ["The Aristocats", 2], ["Independence Day", 3], ["Star Wars", 4], ["The Color Purple", 5]];
+        var movies = [["Gone with the Wind", 1], ["The Aristocats", 2], ["Independence Day", 3], ["Star Wars", 4], ["The Color Purple", 5]];
         
-        //for (var i=0; i < movies.length; i++) {
-        //    for (var j=0; j < movies.length; j++) {
-        //        console.log(movies.filter(movies[[i][j]]));  
-        //    }
-        //}
-        
-        //var newarray=movies.filter(movies[i]==='value1');
-        
-        /*if(!Array.prototype.filter){
-            Array.prototype.filter= function(fun, scope){
-                var L= this.length, A= [], i= 0, val;
-                if(typeof fun== 'function'){
-                    while(i< L){
-                        if(i in this){
-                            val= this[i];
-                            if(fun.call(scope, val, i, this)){
-                                A[A.length]= val;
-                            }
-                        }
-                        ++i;
-                    }
-                }
-                return A;
-            }
+        for (var i=0; i < movies.length; i++) {
+            var movieName = movies[i].filter(function(item) { 
+                
+                return typeof item == "string";
+            });
+            console.log(movieName[i]);     
         }
         
         */
-        //array.filter(function(currentValue,index,arr), thisValue)
-        
         //////////////////////////////////////////////////
         //   Practice with Functions 
         
@@ -299,25 +279,6 @@
 
 
 
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
     </script>
     
